@@ -10,6 +10,18 @@
     <span>Total clicks: 0</span>
     <button id="count_click">click count</button>
 
-    <script src="js/test.js"></script>
+    <script>
+      let count = 0;
+      const countBtn = document.getElementById("count_click");
+      const countSpan = document.querySelector("span");
+
+      function Count() {
+        count = count + 1;
+
+        countSpan.innerText = `Total clicks: ${count}`;
+      }
+
+      countBtn.addEventListener("click", Count);
+    </script>
   </body>
 </html>
