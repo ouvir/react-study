@@ -14,10 +14,18 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById("root");
+    function numCycle(counter) {
+      counter = counter + 1;
+      if (counter > 5) {
+        counter = 0;
+      }
+      return counter;
+    }
+
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        setCounter((current) => numCycle(current));
       };
       return (
         <div>
