@@ -1,9 +1,11 @@
-var countBtn = document.getElementById("count_click");
+let count = 0;
+const countBtn = document.getElementById("count_click");
+const countSpan = document.querySelector("span");
 
 function Count() {
-  var A = countBtn.innerText;
-  A = Number(A) + 1;
-  countBtn.innerText = A;
+  count = count + 1;
+
+  countSpan.innerText = `Total clicks: ${count}`;
 }
 
 countBtn.addEventListener("click", Count);
